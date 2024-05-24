@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.dark-mode {
+  top: 5%;
+  right: 5%;
+}
+
+.dark-mode svg {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dark-mode svg:hover {
+  color: #0d6efd !important;
+}
+
+.mode {
+  display: none;
+}
+
+header {
+  transition: 0.5s;
+}
+
+body:has(.dark-mode input:checked) header {
+  background-color: white;
+}
+
+body:has(.dark-mode input:checked) header h1,
+body:has(.dark-mode input:checked) header p {
+  color: black;
+}
+
+/*----------------------------------------------*/
+
+ header p { 
+  transition: 1.5s; 
+} 
+
+header p span {
+    display: inline-block;
+  transform-origin: center;
+  animation: opacity-animation .5s;
+}
+
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* --------------------- startup-animation -----------*/
+
+.startup-left{
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #233547;
+    width: 50%;
+    z-index: 10000;
+    animation: left 6s ;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+}
+
+@keyframes left{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-200%);
+    }
+}
+
+.startup-right{
+    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #233547;
+    width: 50%;
+    z-index: 10000;
+    animation: right 6s ;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+}
+
+@keyframes right{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(200%);
+    }
+}

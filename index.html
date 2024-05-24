@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes App</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--main css file-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--media query-->
+    <link rel="stylesheet" href="css/media.css">
+  </head>
+  <body data-bs-theme="dark">
+
+    <header class="d-flex align-items-center text-center min-vh-100 position-relative overflow-hidden">
+      <!--startup-->
+      <div class="startup-left">
+        <div class="left">
+        </div>
+      </div>
+      <div class="startup-right">
+        <div class="right">
+        </div>
+      </div>
+      <!--dark-mode-icon ;) -->
+      <div class="dark-mode position-absolute fs-2">
+        <label for="mode">
+          <i class="fa-regular fa-sun text-secondary"></i>
+          <input type="checkbox" id="mode" class="mode">
+        </label>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <h1 class="display-1 fw-bold">Quote of the Day</h1>
+              <p class="my-5 fs-3">Press the button below to recieve a random quote!</p>
+              <button onclick="onButtonClick()" class="btn btn-outline-primary btn-lg px-5 py-3 fw-bold">New Quote</button>
+              <p id="quote" class="my-4 fs-1 fw-semibold "></p>
+              <p id="quoteWriter" class="fs-1 fw-semibold "></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+    <script src="js/index.js"></script>
+    <!--bootstrap-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--fontawesome-->
+    <script src="js/all.min.js"></script>
+  </body>
+</html>
